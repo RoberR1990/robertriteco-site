@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bordenschouw · Robert Riteco</title>
+<meta name="description" content="Map every traffic sign: take a photo, AI reads the sign, you check it.">
+<link rel="canonical" href="https://robertriteco.nl/en/projects/bordenschouw/">
+<link rel="alternate" hreflang="en" href="https://robertriteco.nl/en/projects/bordenschouw/">
+<link rel="alternate" hreflang="nl" href="https://robertriteco.nl/projecten/bordenschouw/">
+<meta property="og:title" content="Bordenschouw · Robert Riteco">
+<meta property="og:description" content="Map every traffic sign: take a photo, AI reads the sign, you check it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://robertriteco.nl/en/projects/bordenschouw/">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a href="#inhoud" class="mono" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'">Skip to content</a>
+<div class="wrap">
+<header class="top">
+<a class="brand" href="/en/"><i aria-hidden="true"></i>Robert Riteco</a>
+<nav aria-label="Menu"><a href="/en/projects/" aria-current="page">Projects</a><a href="/en/collaborate/">Collaborate</a><a href="/en/thoughts/">Thoughts</a><a class="lang" href="/projecten/bordenschouw/" hreflang="nl" lang="nl">NL</a></nav>
+</header>
+<main id="inhoud">
+
+<section class="phead">
+<p class="crumbs"><a href="/en/projects/">← All projects</a></p>
+<span class="status proto mono">Prototype</span>
+<h1>Bordenschouw</h1>
+<p class="tagline">Map every traffic sign: take a photo, AI reads the sign, you check it.</p>
+</section>
+<div class="pbody">
+<div><section class="psec"><h2>Purpose</h2><p>Inspecting a sign means recording which sign is where, in what condition and with what text. Bordenschouw makes that quick. You take a photo, crop the sign, the AI proposes the sign type, condition, text, rate and hours, and you confirm.</p><p>Location and direction come from live GPS and compass during a round, or from the photo itself. There is also a walking mode in which the app takes photos by itself while you walk.</p></section><section class="psec"><h2>Why</h2><p>An up-to-date overview of signs is hard to get and takes a lot of manual work. I wanted to find out how far you get with a phone, a photo and AI recognition, and where a human is still needed.</p></section><section class="psec"><h2>Data</h2><p>The app knows 172 Dutch traffic sign drawings as reference. The signs on the map and dashboard are example data. Photos stay on your device. Only the crop of the sign goes to the AI, and the app warns when people or number plates seem to be in view.</p></section><section class="psec"><h2>What you can do with it</h2><p>Capture signs, see them on a map, view a dashboard with condition per sign type and per area, and export as CSV or GeoJSON. Signals, such as a sign that is plastered over or faded, stand out right away.</p></section><section class="psec"><h2>For other organisations</h2><p>The same approach suits any organisation that has to inventory or inspect things in public space, such as signs, street furniture or markings. The export makes it possible to load the result into existing systems.</p></section><section class="psec"><h2>Status and next steps</h2><p>This is a prototype. For now use it only with test photos. The areas on the map are schematic, not official.</p><p>Further use needs a privacy and security review, a choice of AI service that fits the organisation’s rules, and a link with the existing sign register.</p></section></div>
+<aside class="facts" aria-label="At a glance">
+<h3 style="margin-bottom:14px">At a glance</h3>
+<dl><dt>Status</dt><dd>Prototype, test photos only</dd><dt>Field</dt><dd>Public space management, traffic signs</dd><dt>Data</dt><dd>172 Dutch traffic sign drawings as reference. The 70 signs in the demo are examples</dd><dt>Built with</dt><dd>A single static page, Google Gemini with your own key for recognition</dd></dl>
+<a class="btn fill" href="https://roberr1990.github.io/bordenschouw/">Open the project ↗</a>
+<a class="btn" href="https://github.com/RoberR1990/bordenschouw">View the code ↗</a>
+</aside>
+</div>
+
+</main>
+<footer>
+<p>Made by Robert Riteco, with the help of AI. My own work and opinion, not a position of my employer.</p>
+<p><a href="https://github.com/RoberR1990/robertriteco-site">Source code of this site</a> · <a href="https://github.com/RoberR1990">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>
