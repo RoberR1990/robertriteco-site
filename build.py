@@ -7,7 +7,7 @@ import html
 import shutil
 from pathlib import Path
 
-from content import CONTACT, PROJECTS, SITE, UI
+from content import ARTICLES, CONTACT, PROJECTS, SITE, UI
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "public"
@@ -225,17 +225,55 @@ def collab(lang):
 """
 
 
+def art_path(lang, slug):
+    return UI[lang]["paths"]["thoughts"] + slug + "/"
+
+
 def thoughts(lang):
     t = UI[lang]
     topics = "".join(f"<li>{e(x)}</li>" for x in t["thoughts_topics"])
+    if ARTICLES:
+        items = "".join(
+            f'<article class="card" style="max-width:44rem"><span class="mono muted">{e(a[lang]["date_label"])}</span>'
+            f'<h3><a href="{art_path(lang, a["slug"])}">{e(a[lang]["title"])}</a></h3>'
+            f'<p>{e(a[lang]["summary"])}</p><span class="more">{e(t["read_more"])} →</span></article>'
+            for a in ARTICLES)
+        lead = f'<div style="display:grid;gap:20px">{items}</div>'
+    else:
+        lead = f'<p class="note">{e(t["thoughts_empty"])}</p>'
     return f"""
 <section class="phead"><h1>{e(t["thoughts_page_h"])}</h1><p class="tagline">{e(t["thoughts_page_lead"])}</p></section>
-<p class="note">{e(t["thoughts_empty"])}</p>
+{lead}
 <section class="two">
-<div class="prose"><h2>{e(t["thoughts_topics_h"])}</h2></div>
+<div class="prose"><h2>{e(t["thoughts_more_h"])}</h2></div>
 <ul class="ticks">{topics}</ul>
 </section>
 """
+
+
+def article_page(lang, a):
+    t, c = UI[lang], a[lang]
+    out = []
+    for kind, val in c["body"]:
+        if kind == "h":
+            out.append(f"<h2>{e(val)}</h2>")
+        elif kind == "p":
+            out.append(f"<p>{e(val)}</p>")
+        else:
+            out.append('<ul class="ticks">' + "".join(f"<li>{e(x)}</li>" for x in val) + "</ul>")
+    return f"""
+<article class="article">
+<p class="crumbs"><a href="{t["paths"]["thoughts"]}">← {e(t["back_thoughts"])}</a></p>
+<span class="mono muted">{e(c["date_label"])}</span>
+<h1 style="margin-top:10px">{e(c["title"])}</h1>
+<div class="body">{"".join(out)}</div>
+</article>
+"""
+
+
+def sitemap(urls):
+    rows = "".join(f"<url><loc>{SITE['domain']}{u}</loc></url>" for u in sorted(urls))
+    return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{rows}</urlset>\n'
 
 
 def write(path, text):
@@ -258,6 +296,15 @@ def main():
         for p in PROJECTS:
             path, alt = proj_path(lang, p["slug"]), proj_path(pairs[lang], p["slug"])
             write(path, page(lang, path, alt, p[lang]["name"], p[lang]["tagline"], project_page(lang, p), "projects"))
+        for a in ARTICLES:
+            path, alt = art_path(lang, a["slug"]), art_path(pairs[lang], a["slug"])
+            write(path, page(lang, path, alt, a[lang]["title"], a[lang]["summary"], article_page(lang, a), "thoughts"))
+    urls = []
+    for f in OUT.rglob("index.html"):
+        rel = f.parent.relative_to(OUT).as_posix()
+        urls.append("/" if rel == "." else f"/{rel}/")
+    (OUT / "sitemap.xml").write_text(sitemap(urls), encoding="utf-8")
+    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE['domain']}/sitemap.xml\n", encoding="utf-8")
     print("klaar:", sum(1 for _ in OUT.rglob("*.html")), "pagina's in", OUT)
 
 

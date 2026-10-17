@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI laten controleren door AI werkt niet. Een script wel. · Robert Riteco</title>
+<meta name="description" content="Wat er misging toen AI-samenvattingen in Raadzoeker door een tweede model werden gecontroleerd, en wat wel werkte.">
+<link rel="canonical" href="https://robertriteco.nl/gedachten/ai-laten-controleren/">
+<link rel="alternate" hreflang="nl" href="https://robertriteco.nl/gedachten/ai-laten-controleren/">
+<link rel="alternate" hreflang="en" href="https://robertriteco.nl/en/thoughts/ai-laten-controleren/">
+<meta property="og:title" content="AI laten controleren door AI werkt niet. Een script wel. · Robert Riteco">
+<meta property="og:description" content="Wat er misging toen AI-samenvattingen in Raadzoeker door een tweede model werden gecontroleerd, en wat wel werkte.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://robertriteco.nl/gedachten/ai-laten-controleren/">
+<meta property="og:image" content="https://robertriteco.nl/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a href="#inhoud" class="mono" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'">Naar de inhoud</a>
+<div class="wrap">
+<header class="top">
+<a class="brand" href="/"><svg viewBox="0 0 44 28" aria-hidden="true"><defs><clipPath id="mk"><circle cx="15" cy="14" r="12"/></clipPath></defs><circle cx="15" cy="14" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="29" cy="14" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="29" cy="14" r="12" clip-path="url(#mk)" fill="var(--accent)"/></svg>Robert Riteco</a>
+<nav aria-label="Menu"><a href="/projecten/">Projecten</a><a href="/samenwerken/">Samenwerken</a><a href="/gedachten/" aria-current="page">Gedachten</a><a class="lang" href="/en/thoughts/ai-laten-controleren/" hreflang="en" lang="en">EN</a></nav>
+</header>
+<main id="inhoud">
+
+<article class="article">
+<p class="crumbs"><a href="/gedachten/">← Alle gedachten</a></p>
+<span class="mono muted">17 oktober 2026</span>
+<h1 style="margin-top:10px">AI laten controleren door AI werkt niet. Een script wel.</h1>
+<div class="body"><h2>Wat ik bouwde</h2><p>Raadzoeker maakt samenvattingen van wat de Rotterdamse gemeenteraad bespreekt. Die samenvattingen schrijft een AI, op basis van de uitgeschreven debatten. Dat is precies het werk waar AI goed in lijkt: veel tekst lezen en er iets leesbaars van maken. Het is ook werk waar fouten ernstig zijn. Een samenvatting die een raadslid iets laat zeggen wat niet is gezegd, doet schade.</p><h2>Wat er misging</h2><p>Mijn eerste versie liet een lichter model samenvattingen maken zonder dat het iets hoefde te bewijzen. Daarin stonden namen die uit voorbeeldbestanden waren overgenomen en partijclichés die nergens uit het debat kwamen. Bij een ander thema schreef het model uitspraken van een wethouder toe aan een fractie.</p><p>Mijn tweede idee was logisch: laat een tweede model het werk nakijken. Dat bleek niet te werken. De controleur keurde vrijwel alles goed, ook samenvattingen met deels verzonnen citaten. Een model dat de tekst plausibel vindt, vindt de controle ook plausibel.</p><h2>Wat wel werkte</h2><p>Elke bewering in een samenvatting moet nu vergezeld gaan van een letterlijk citaat uit de bron. Een script controleert vervolgens woord voor woord of dat citaat echt in het debat staat. Staat het er niet, dan verdwijnt de bewering uit de samenvatting. Bij uitspraken die aan een fractie worden toegeschreven, controleert het script ook of het citaat uit een fragment van die fractie komt.</p><p>Het script heeft geen mening en laat zich niet overtuigen. Daardoor is het het enige stuk in de keten dat ik echt kan vertrouwen.</p><h2>Wat het niet vangt</h2><p>De controle vangt verzonnen citaten. Ze vangt niet een samenvatting die een echt citaat te ruim uitlegt. Ook de automatische ondertiteling kan een verkeerde spreker noemen, en daar ziet het script niets van. Daarom staat elke samenvatting als AI gelabeld op de site en is de bron altijd één klik verder.</p><h2>Wat ik hieruit meeneem</h2><ul class="ticks"><li>Vraag een AI niet om een oordeel, maar om bewijs in een vorm die een machine kan toetsen, zoals een letterlijk citaat of een bronverwijzing.</li><li>Laat een eenvoudig script dat bewijs controleren in plaats van een tweede model.</li><li>Zeg er eerlijk bij wat er niet gecontroleerd is. Dat vergroot het vertrouwen eerder dan dat het het afbreekt.</li></ul><p>Dit geldt ver buiten raadsdebatten. Overal waar een organisatie AI inzet om samen te vatten, te classificeren of te beantwoorden, is de vraag niet of het model goed genoeg is. De vraag is hoe je aantoont dat het resultaat klopt.</p></div>
+</article>
+
+</main>
+<footer>
+<p>Gemaakt door Robert Riteco, met hulp van AI. Eigen werk en eigen mening, geen standpunt van mijn werkgever.</p>
+<p><a href="https://github.com/RoberR1990/robertriteco-site">Broncode van deze site</a> · <a href="https://github.com/RoberR1990">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

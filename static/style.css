@@ -147,3 +147,10 @@ main { padding-block: clamp(36px, 7vw, 80px) clamp(40px, 8vw, 96px); display: gr
 footer { border-top: 1px solid var(--line); padding-block: 28px 40px; display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; color: var(--muted); font-size: .9375rem; }
 footer a { color: var(--muted); }
 footer p { margin: 0; max-width: none; }
+
+/* artikel */
+.article { max-width: 44rem; }
+.article h1 { font-size: clamp(1.9rem, 4.4vw, 3rem); max-width: 22ch; }
+.article .body { margin-top: 28px; }
+.article .body h2 { font-size: 1.4rem; margin: 2em 0 .6em; }
+.article .body p, .article .body .ticks { font-size: 1.125rem; line-height: 1.7; }

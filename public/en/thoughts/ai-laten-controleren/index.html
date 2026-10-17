@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Having AI check AI does not work. A script does. · Robert Riteco</title>
+<meta name="description" content="What went wrong when AI summaries in Raadzoeker were checked by a second model, and what worked instead.">
+<link rel="canonical" href="https://robertriteco.nl/en/thoughts/ai-laten-controleren/">
+<link rel="alternate" hreflang="en" href="https://robertriteco.nl/en/thoughts/ai-laten-controleren/">
+<link rel="alternate" hreflang="nl" href="https://robertriteco.nl/gedachten/ai-laten-controleren/">
+<meta property="og:title" content="Having AI check AI does not work. A script does. · Robert Riteco">
+<meta property="og:description" content="What went wrong when AI summaries in Raadzoeker were checked by a second model, and what worked instead.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://robertriteco.nl/en/thoughts/ai-laten-controleren/">
+<meta property="og:image" content="https://robertriteco.nl/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a href="#inhoud" class="mono" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'">Skip to content</a>
+<div class="wrap">
+<header class="top">
+<a class="brand" href="/en/"><svg viewBox="0 0 44 28" aria-hidden="true"><defs><clipPath id="mk"><circle cx="15" cy="14" r="12"/></clipPath></defs><circle cx="15" cy="14" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="29" cy="14" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="29" cy="14" r="12" clip-path="url(#mk)" fill="var(--accent)"/></svg>Robert Riteco</a>
+<nav aria-label="Menu"><a href="/en/projects/">Projects</a><a href="/en/collaborate/">Collaborate</a><a href="/en/thoughts/" aria-current="page">Thoughts</a><a class="lang" href="/gedachten/ai-laten-controleren/" hreflang="nl" lang="nl">NL</a></nav>
+</header>
+<main id="inhoud">
+
+<article class="article">
+<p class="crumbs"><a href="/en/thoughts/">← All thoughts</a></p>
+<span class="mono muted">17 October 2026</span>
+<h1 style="margin-top:10px">Having AI check AI does not work. A script does.</h1>
+<div class="body"><h2>What I built</h2><p>Raadzoeker writes summaries of what the Rotterdam city council discusses. An AI writes them, based on the transcribed debates. That is exactly the kind of work AI seems good at: reading a lot of text and turning it into something readable. It is also work where mistakes are serious. A summary that has a council member say something that was not said does harm.</p><h2>What went wrong</h2><p>My first version let a lighter model write summaries without having to prove anything. They contained names carried over from example files and party clichés that came from nowhere in the debate. For another topic, the model attributed statements by an alderman to a party group.</p><p>My second idea seemed logical: have a second model check the work. That did not work. The checker approved almost everything, including summaries with partly invented quotes. A model that finds the text plausible also finds the check plausible.</p><h2>What worked</h2><p>Every claim in a summary now has to come with a verbatim quote from the source. A script then checks word for word whether that quote really appears in the debate. If it does not, the claim is removed from the summary. For statements attributed to a party group, the script also checks that the quote comes from a fragment by that group.</p><p>The script has no opinion and cannot be talked round. That makes it the one part of the chain I can really trust.</p><h2>What it does not catch</h2><p>The check catches invented quotes. It does not catch a summary that stretches a real quote too far. Automatic subtitles can also name the wrong speaker, and the script sees nothing of that. That is why every summary is labelled as AI on the site and the source is always one click away.</p><h2>What I take from this</h2><ul class="ticks"><li>Do not ask an AI for a judgement, ask it for evidence in a form a machine can test, such as a verbatim quote or a source reference.</li><li>Let a simple script check that evidence instead of a second model.</li><li>Say honestly what has not been checked. That builds trust rather than breaking it.</li></ul><p>This applies far beyond council debates. Wherever an organisation uses AI to summarise, classify or answer, the question is not whether the model is good enough. The question is how you show that the result is right.</p></div>
+</article>
+
+</main>
+<footer>
+<p>Made by Robert Riteco, with the help of AI. My own work and opinion, not a position of my employer.</p>
+<p><a href="https://github.com/RoberR1990/robertriteco-site">Source code of this site</a> · <a href="https://github.com/RoberR1990">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

@@ -265,6 +265,64 @@ PROJECTS = [
     },
 ]
 
+
+# ---------------------------------------------------------------- gedachten
+
+ARTICLES = [
+    {
+        "slug": "ai-laten-controleren",
+        "date": "2026-10-17",
+        "nl": {
+            "title": "AI laten controleren door AI werkt niet. Een script wel.",
+            "date_label": "17 oktober 2026",
+            "summary": "Wat er misging toen AI-samenvattingen in Raadzoeker door een tweede model werden gecontroleerd, en wat wel werkte.",
+            "body": [
+                ("h", "Wat ik bouwde"),
+                ("p", "Raadzoeker maakt samenvattingen van wat de Rotterdamse gemeenteraad bespreekt. Die samenvattingen schrijft een AI, op basis van de uitgeschreven debatten. Dat is precies het werk waar AI goed in lijkt: veel tekst lezen en er iets leesbaars van maken. Het is ook werk waar fouten ernstig zijn. Een samenvatting die een raadslid iets laat zeggen wat niet is gezegd, doet schade."),
+                ("h", "Wat er misging"),
+                ("p", "Mijn eerste versie liet een lichter model samenvattingen maken zonder dat het iets hoefde te bewijzen. Daarin stonden namen die uit voorbeeldbestanden waren overgenomen en partijclichés die nergens uit het debat kwamen. Bij een ander thema schreef het model uitspraken van een wethouder toe aan een fractie."),
+                ("p", "Mijn tweede idee was logisch: laat een tweede model het werk nakijken. Dat bleek niet te werken. De controleur keurde vrijwel alles goed, ook samenvattingen met deels verzonnen citaten. Een model dat de tekst plausibel vindt, vindt de controle ook plausibel."),
+                ("h", "Wat wel werkte"),
+                ("p", "Elke bewering in een samenvatting moet nu vergezeld gaan van een letterlijk citaat uit de bron. Een script controleert vervolgens woord voor woord of dat citaat echt in het debat staat. Staat het er niet, dan verdwijnt de bewering uit de samenvatting. Bij uitspraken die aan een fractie worden toegeschreven, controleert het script ook of het citaat uit een fragment van die fractie komt."),
+                ("p", "Het script heeft geen mening en laat zich niet overtuigen. Daardoor is het het enige stuk in de keten dat ik echt kan vertrouwen."),
+                ("h", "Wat het niet vangt"),
+                ("p", "De controle vangt verzonnen citaten. Ze vangt niet een samenvatting die een echt citaat te ruim uitlegt. Ook de automatische ondertiteling kan een verkeerde spreker noemen, en daar ziet het script niets van. Daarom staat elke samenvatting als AI gelabeld op de site en is de bron altijd één klik verder."),
+                ("h", "Wat ik hieruit meeneem"),
+                ("ul", [
+                    "Vraag een AI niet om een oordeel, maar om bewijs in een vorm die een machine kan toetsen, zoals een letterlijk citaat of een bronverwijzing.",
+                    "Laat een eenvoudig script dat bewijs controleren in plaats van een tweede model.",
+                    "Zeg er eerlijk bij wat er niet gecontroleerd is. Dat vergroot het vertrouwen eerder dan dat het het afbreekt.",
+                ]),
+                ("p", "Dit geldt ver buiten raadsdebatten. Overal waar een organisatie AI inzet om samen te vatten, te classificeren of te beantwoorden, is de vraag niet of het model goed genoeg is. De vraag is hoe je aantoont dat het resultaat klopt."),
+            ],
+        },
+        "en": {
+            "title": "Having AI check AI does not work. A script does.",
+            "date_label": "17 October 2026",
+            "summary": "What went wrong when AI summaries in Raadzoeker were checked by a second model, and what worked instead.",
+            "body": [
+                ("h", "What I built"),
+                ("p", "Raadzoeker writes summaries of what the Rotterdam city council discusses. An AI writes them, based on the transcribed debates. That is exactly the kind of work AI seems good at: reading a lot of text and turning it into something readable. It is also work where mistakes are serious. A summary that has a council member say something that was not said does harm."),
+                ("h", "What went wrong"),
+                ("p", "My first version let a lighter model write summaries without having to prove anything. They contained names carried over from example files and party clichés that came from nowhere in the debate. For another topic, the model attributed statements by an alderman to a party group."),
+                ("p", "My second idea seemed logical: have a second model check the work. That did not work. The checker approved almost everything, including summaries with partly invented quotes. A model that finds the text plausible also finds the check plausible."),
+                ("h", "What worked"),
+                ("p", "Every claim in a summary now has to come with a verbatim quote from the source. A script then checks word for word whether that quote really appears in the debate. If it does not, the claim is removed from the summary. For statements attributed to a party group, the script also checks that the quote comes from a fragment by that group."),
+                ("p", "The script has no opinion and cannot be talked round. That makes it the one part of the chain I can really trust."),
+                ("h", "What it does not catch"),
+                ("p", "The check catches invented quotes. It does not catch a summary that stretches a real quote too far. Automatic subtitles can also name the wrong speaker, and the script sees nothing of that. That is why every summary is labelled as AI on the site and the source is always one click away."),
+                ("h", "What I take from this"),
+                ("ul", [
+                    "Do not ask an AI for a judgement, ask it for evidence in a form a machine can test, such as a verbatim quote or a source reference.",
+                    "Let a simple script check that evidence instead of a second model.",
+                    "Say honestly what has not been checked. That builds trust rather than breaking it.",
+                ]),
+                ("p", "This applies far beyond council debates. Wherever an organisation uses AI to summarise, classify or answer, the question is not whether the model is good enough. The question is how you show that the result is right."),
+            ],
+        },
+    },
+]
+
 # ---------------------------------------------------------------- pagina's
 
 UI = {
@@ -323,11 +381,11 @@ UI = {
         "thoughts_page_h": "Gedachten",
         "thoughts_page_lead": "Hier komen korte stukken over hoe AI het werk en de samenleving verandert, vanuit wat ik zelf bouw en meemaak.",
         "thoughts_empty": "Het eerste stuk is in de maak. Wil je een melding als het er staat? Volg me op LinkedIn.",
+        "read_more": "Lees het stuk", "back_thoughts": "Alle gedachten", "thoughts_more_h": "Waar ik nog over wil schrijven",
         "thoughts_topics_h": "Waar ik over wil schrijven",
         "thoughts_topics": [
             "Wat vibecoding betekent voor wie nooit programmeur was",
             "Wat overheden kunnen leren van wat één persoon in een paar weken bouwt",
-            "Waar AI in publiek werk wel en niet te vertrouwen is, en hoe je dat controleert",
             "Hoe je open data echt bruikbaar maakt",
         ],
         "footer_made": "Gemaakt door Robert Riteco, met hulp van AI.",
@@ -390,11 +448,11 @@ UI = {
         "thoughts_page_h": "Thoughts",
         "thoughts_page_lead": "Short pieces on how AI changes work and society, based on what I build and experience myself.",
         "thoughts_empty": "The first piece is in the making. Want a heads-up when it is out? Follow me on LinkedIn.",
+        "read_more": "Read the piece", "back_thoughts": "All thoughts", "thoughts_more_h": "What I still want to write about",
         "thoughts_topics_h": "What I want to write about",
         "thoughts_topics": [
             "What vibe coding means for people who were never programmers",
             "What governments can learn from what one person builds in a few weeks",
-            "Where AI can and cannot be trusted in public work, and how you check",
             "How to make open data truly usable",
         ],
         "footer_made": "Made by Robert Riteco, with the help of AI.",
