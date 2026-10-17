@@ -12,6 +12,8 @@
 <meta property="og:description" content="Map every traffic sign: take a photo, AI reads the sign, you check it.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://robertriteco.nl/en/projects/bordenschouw/">
+<meta property="og:image" content="https://robertriteco.nl/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +25,7 @@
 <a href="#inhoud" class="mono" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'">Skip to content</a>
 <div class="wrap">
 <header class="top">
-<a class="brand" href="/en/"><i aria-hidden="true"></i>Robert Riteco</a>
+<a class="brand" href="/en/"><svg viewBox="0 0 44 28" aria-hidden="true"><defs><clipPath id="mk"><circle cx="15" cy="14" r="12"/></clipPath></defs><circle cx="15" cy="14" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="29" cy="14" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="29" cy="14" r="12" clip-path="url(#mk)" fill="var(--accent)"/></svg>Robert Riteco</a>
 <nav aria-label="Menu"><a href="/en/projects/" aria-current="page">Projects</a><a href="/en/collaborate/">Collaborate</a><a href="/en/thoughts/">Thoughts</a><a class="lang" href="/projecten/bordenschouw/" hreflang="nl" lang="nl">NL</a></nav>
 </header>
 <main id="inhoud">
@@ -34,6 +36,7 @@
 <h1>Bordenschouw</h1>
 <p class="tagline">Map every traffic sign: take a photo, AI reads the sign, you check it.</p>
 </section>
+<img class="shot" src="/img/bordenschouw.jpg" alt="Map of Rotterdam with example signs as coloured points" width="1440" height="810" loading="lazy" decoding="async">
 <div class="pbody">
 <div><section class="psec"><h2>Purpose</h2><p>Inspecting a sign means recording which sign is where, in what condition and with what text. Bordenschouw makes that quick. You take a photo, crop the sign, the AI proposes the sign type, condition, text, rate and hours, and you confirm.</p><p>Location and direction come from live GPS and compass during a round, or from the photo itself. There is also a walking mode in which the app takes photos by itself while you walk.</p></section><section class="psec"><h2>Why</h2><p>An up-to-date overview of signs is hard to get and takes a lot of manual work. I wanted to find out how far you get with a phone, a photo and AI recognition, and where a human is still needed.</p></section><section class="psec"><h2>Data</h2><p>The app knows 172 Dutch traffic sign drawings as reference. The signs on the map and dashboard are example data. Photos stay on your device. Only the crop of the sign goes to the AI, and the app warns when people or number plates seem to be in view.</p></section><section class="psec"><h2>What you can do with it</h2><p>Capture signs, see them on a map, view a dashboard with condition per sign type and per area, and export as CSV or GeoJSON. Signals, such as a sign that is plastered over or faded, stand out right away.</p></section><section class="psec"><h2>For other organisations</h2><p>The same approach suits any organisation that has to inventory or inspect things in public space, such as signs, street furniture or markings. The export makes it possible to load the result into existing systems.</p></section><section class="psec"><h2>Status and next steps</h2><p>This is a prototype. For now use it only with test photos. The areas on the map are schematic, not official.</p><p>Further use needs a privacy and security review, a choice of AI service that fits the organisation’s rules, and a link with the existing sign register.</p></section></div>
 <aside class="facts" aria-label="At a glance">

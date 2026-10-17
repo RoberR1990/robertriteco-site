@@ -6,7 +6,7 @@ Contactgegevens: vul CONTACT in; zolang ze leeg zijn toont de site een gele 'nog
 
 CONTACT = {
     "email": "",      # bijv. "robert@robertriteco.nl"
-    "linkedin": "",   # volledige URL van je LinkedIn-profiel
+    "linkedin": "https://www.linkedin.com/in/rriteco/",   # volledige URL van je LinkedIn-profiel
 }
 
 SITE = {
@@ -22,9 +22,11 @@ PROJECTS = [
         "featured": True,
         "status": "live",
         "url": "https://raadzoeker.nl",
+        "shot": "raadzoeker.jpg", "shot_w": 1440, "shot_h": 810,
         "code": "https://github.com/RoberR1990/raadzoeker",
         "nl": {
             "name": "Raadzoeker",
+            "shot_alt": "Startpagina van Raadzoeker met een citaat uit de laatste raadsvergadering en zoekbalk",
             "tagline": "Wat de Rotterdamse raad zegt, besluit en belooft, op één plek doorzoekbaar.",
             "card": "Zoek in alles wat de Rotterdamse gemeenteraad, de commissies en de wijkraden sinds 2018 zeiden en schreven.",
             "status_label": "Live",
@@ -64,6 +66,7 @@ PROJECTS = [
         },
         "en": {
             "name": "Raadzoeker",
+            "shot_alt": "Raadzoeker home page with a quote from the latest council meeting and a search bar",
             "tagline": "What the Rotterdam city council says, decides and promises, searchable in one place.",
             "card": "Search everything the Rotterdam city council, its committees and the district councils said and wrote since 2018.",
             "status_label": "Live",
@@ -107,15 +110,17 @@ PROJECTS = [
         "featured": False,
         "status": "exp",
         "url": "https://roberr1990.github.io/doorzicht/",
+        "shot": "doorzicht.jpg", "shot_w": 820, "shot_h": 640,
         "code": "https://github.com/RoberR1990/doorzicht",
         "nl": {
             "name": "Doorzicht",
+            "shot_alt": "3D-model van een fictieve parkeergarage met lagen, auto’s en meldingen",
             "tagline": "Zie wat verstopt zit: versnipperde informatie over een parkeergarage op één visuele plek, in 3D.",
             "card": "Een 3D-model van een fictieve parkeergarage waar droge, verspreide informatie samenkomt en bespreekbaar wordt.",
             "status_label": "Experiment",
             "facts": [
                 ("Status", "Experiment met fictieve en open data"),
-                ("Domein", "Parkeren, gebiedsbeheer, datagedreven werken"),
+                ("Domein", "Assetbeheer, datagedreven werken"),
                 ("Data", "Fictieve data en open data. De garage ‘Toppert’ en alle cijfers zijn verzonnen"),
                 ("Gebouwd met", "Three.js, één statische pagina"),
             ],
@@ -144,12 +149,13 @@ PROJECTS = [
         },
         "en": {
             "name": "Doorzicht",
+            "shot_alt": "3D model of a fictional parking garage with levels, cars and alerts",
             "tagline": "See what is hidden: scattered information about a parking garage in one visual place, in 3D.",
             "card": "A 3D model of a fictional parking garage where dry, scattered information comes together and becomes something to talk about.",
             "status_label": "Experiment",
             "facts": [
                 ("Status", "Experiment with fictional and open data"),
-                ("Field", "Parking, area management, data-driven work"),
+                ("Field", "Asset management, data-driven work"),
                 ("Data", "Fictional and open data. The garage ‘Toppert’ and all figures are made up"),
                 ("Built with", "Three.js, a single static page"),
             ],
@@ -182,9 +188,11 @@ PROJECTS = [
         "featured": False,
         "status": "proto",
         "url": "https://roberr1990.github.io/bordenschouw/",
+        "shot": "bordenschouw.jpg", "shot_w": 1440, "shot_h": 810,
         "code": "https://github.com/RoberR1990/bordenschouw",
         "nl": {
             "name": "Bordenschouw",
+            "shot_alt": "Kaart van Rotterdam met voorbeeldborden als gekleurde punten",
             "tagline": "Alle verkeersborden in kaart: foto maken, AI laat het bord lezen, jij controleert.",
             "card": "Een prototype om verkeersborden vast te leggen vanaf een foto of tijdens een wandeling, met kaart, dashboard en export.",
             "status_label": "Prototype",
@@ -220,6 +228,7 @@ PROJECTS = [
         },
         "en": {
             "name": "Bordenschouw",
+            "shot_alt": "Map of Rotterdam with example signs as coloured points",
             "tagline": "Map every traffic sign: take a photo, AI reads the sign, you check it.",
             "card": "A prototype for capturing traffic signs from a photo or during a walk, with map, dashboard and export.",
             "status_label": "Prototype",
@@ -266,11 +275,13 @@ UI = {
         "nav": {"projects": "Projecten", "collab": "Samenwerken", "thoughts": "Gedachten"},
         "paths": {"projects": "/projecten/", "collab": "/samenwerken/", "thoughts": "/gedachten/", "home": "/"},
         "other_lang": "EN",
-        "hero_h1": "Wat kan één persoon met AI bouwen voor de publieke zaak?",
-        "hero_lead": "Ik ben Robert Riteco. Ik bouw met AI-hulp (vibecoding) werkende tools rond open data en gemeentewerk, zet ze online en schrijf op wat ik ervan leer. Zoek je iemand om iets mee uit te proberen of te bouwen? Laat het me weten.",
+        "hero_h1": "Data en AI, samengebracht in slimme tools die werken.",
+        "hero_lead": "Ik ben Robert Riteco en werk op de kruising van data en AI. Ik bouw tools die echt bruikbaar zijn, zoals Raadzoeker, en deel wat ik daarvan leer. Wil je iets uitproberen, hergebruiken of samen bouwen? Laat het me weten.",
         "hero_btn1": "Bekijk de projecten",
         "hero_btn2": "Samenwerken",
-        "vibe_note": "Vibecoding: software maken door in gewone taal samen te werken met een AI.",
+        "vibe_note": "Ik bouw met AI-hulp (vibecoding): software maken door in gewone taal samen te werken met een AI.",
+        "venn_alt": "Twee elkaar overlappende cirkels: data en AI. Waar ze overlappen staan tools.",
+        "venn_data": "Data", "venn_ai": "AI", "venn_tools": "Tools",
         "featured": "Uitgelicht",
         "view_project": "Bekijk het project",
         "open_live": "Open Raadzoeker",
@@ -278,7 +289,7 @@ UI = {
         "all_projects": "Alle projecten",
         "about_h": "Over mij",
         "about": [
-            "Ik werk als productmanager data bij Stadsbeheer van de gemeente Rotterdam, bij Parkeren. Daarnaast bouw ik in mijn eigen tijd met AI aan tools die laten zien wat er kan met open data.",
+            "Ik ben productmanager data bij de gemeente Rotterdam. Mijn werk en mijn eigen projecten draaien om dezelfde vraag: hoe maak je data en AI praktisch bruikbaar? Ik bouw zelf, probeer uit met echte open data en deel wat wel en niet werkt.",
             "Wat ik hier deel is mijn eigen werk en mijn eigen kijk. Niets hiervan is een standpunt of product van mijn werkgever, tenzij dat er uitdrukkelijk bij staat.",
         ],
         "collab_h": "Samenwerken",
@@ -331,11 +342,13 @@ UI = {
         "nav": {"projects": "Projects", "collab": "Collaborate", "thoughts": "Thoughts"},
         "paths": {"projects": "/en/projects/", "collab": "/en/collaborate/", "thoughts": "/en/thoughts/", "home": "/en/"},
         "other_lang": "NL",
-        "hero_h1": "What can one person build with AI for the public good?",
-        "hero_lead": "I am Robert Riteco. With AI assistance (vibe coding) I build working tools around open data and municipal work, put them online and write down what I learn. Looking for someone to try something with or build something together? Get in touch.",
+        "hero_h1": "Data and AI, brought together in smart tools that work.",
+        "hero_lead": "I am Robert Riteco and I work at the crossing of data and AI. I build tools that are genuinely useful, like Raadzoeker, and share what I learn. Want to try something out, reuse it or build it together? Get in touch.",
         "hero_btn1": "See the projects",
         "hero_btn2": "Collaborate",
-        "vibe_note": "Vibe coding: making software by working with an AI in plain language.",
+        "vibe_note": "I build with AI assistance (vibe coding): making software by working with an AI in plain language.",
+        "venn_alt": "Two overlapping circles: data and AI. Where they overlap are tools.",
+        "venn_data": "Data", "venn_ai": "AI", "venn_tools": "Tools",
         "featured": "Featured",
         "view_project": "View the project",
         "open_live": "Open Raadzoeker",
@@ -343,7 +356,7 @@ UI = {
         "all_projects": "All projects",
         "about_h": "About me",
         "about": [
-            "I work as a data product manager at Stadsbeheer of the city of Rotterdam, in Parking. In my own time I build tools with AI that show what is possible with open data.",
+            "I am a data product manager at the city of Rotterdam. My work and my own projects revolve around the same question: how do you make data and AI practically useful? I build myself, try things out with real open data and share what does and does not work.",
             "What I share here is my own work and my own view. None of it is a position or product of my employer unless it explicitly says so.",
         ],
         "collab_h": "Collaborate",
